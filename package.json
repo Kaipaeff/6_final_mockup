@@ -1,0 +1,24 @@
+{
+  "name": "javascript-in-browser-main",
+  "version": "1.0.0",
+  "description": "- [Требования к стилю кода](https://learn.javascript.ru/coding-style) - [Условные ветвления](https://learn.javascript.ru/ifelse) - [Циклы](https://learn.javascript.ru/while-for) - [Switch-case](https://learn.javascript.ru/switch) - [Функции](https://learn.javascript.ru/function-basics) - [DOM](https://learn.javascript.ru/dom-nodes) - [Введение в события](https://learn.javascript.ru/events)",
+  "main": "index.js",
+  "dependencies": {
+    "swiper": "^10.3.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kaipaeff/5-js-in-browser-main.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kaipaeff/5-js-in-browser-main/issues"
+  },
+  "homepage": "https://github.com/Kaipaeff/5-js-in-browser-main#readme"
+}
