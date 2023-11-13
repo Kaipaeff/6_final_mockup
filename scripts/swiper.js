@@ -69,16 +69,43 @@ new Swiper('.swiper-container', {
 
 
   // //! Адаптив, ширина экрана
-  // breakpoints: {
-  //   320: {
-  //     slidesPerView: 1.25,
-  //   },
-  //   480: {
-  //     slidesPerView: 1.4,
-  //   },
-  //   992: {
-  //     slidesPerView: 3,
-  //   },
-  // }
+  breakpoints: {
+    320: {
+      slidesPerView: 1.25,
+    },
+    340: {
+      slidesPerView: 1.3,
+    },
+    380: {
+      slidesPerView: 1.4,
+    },
+    420: {
+      slidesPerView: 1.5,
+    },
+    460: {
+      slidesPerView: 1.6,
+    },
+    500: {
+      slidesPerView: 1.8,
+    },
+    540: {
+      slidesPerView: 2.2,
+    },
+    600: {
+      slidesPerView: 2.3,
+    },
+    640: {
+      slidesPerView: 2.4,
+    },
+    680: {
+      slidesPerView: 2.5,
+    },
+    720: {
+      slidesPerView: 2.6,
+    },
+    767: {
+      slidesPerView: 2.7,
+    },
+  }
 
 });
