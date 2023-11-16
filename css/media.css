@@ -9,6 +9,16 @@
     margin-right: 20px;
   }
 
+  .header__nav:hover {
+    background-color: #FFE0E9;
+    transition: background-color 0.3s ease;
+  }
+
+  .header__nav:hover .nav__line {
+    background-color: #FF3E79;
+    transition: background-color 0.3s ease;
+  }
+
   .nav__sidebar {
     padding: 32px 24px;
   }
@@ -44,6 +54,19 @@
 
   .control-list__item {
     height: 40px;
+    cursor: pointer;
+  }
+
+  .control-list__item svg:hover rect,
+  .service-list__item svg:hover rect {
+    fill: #FFE0E9;
+    transition: fill 0.3s ease-in-out;
+  }
+
+  .control-list__item svg:hover path,
+  .service-list__item svg:hover path {
+    fill: #FF3E79;
+    transition: fill 0.3s ease-in-out;
   }
 
   .control-list__item:last-child {
@@ -95,16 +118,34 @@
     left: -24px;
   }
 
+  .sidebar__menu-tab:hover {
+    color: #FF3E79;
+    transition: 0.2s ease-in;
+    cursor: pointer;
+  }
+
   .sidebar__menu-tab::before {
     left: -24px;
   }
 
+  /* .sidebar__menu-tab:hover::before {
+    left: -24px;
+  } */
+
   .sidebar__menu-tab:hover::before {
     left: -24px;
+    width: 4px;
+    background: url('../img/icons/highlight-sidebar-hover.svg');
+    transition: 0.2s ease-in;
   }
 
   .sidebar__control-list {
     visibility: hidden;
+  }
+
+  .sidebar__lang-item input:not(:checked)+label:hover {
+    color: #FF3E79;
+    cursor: pointer;
   }
 
   .services__content {
@@ -120,6 +161,20 @@
 
   .services__descr {
     line-height: 20px;
+  }
+
+  .services__read-more:hover,
+  .brands__read-more:hover,
+  .technics__read-more:hover {
+    color: #FF3E79;
+    transition: 0.3s ease-out;
+  }
+
+  .services__read-more:hover svg path,
+  .brands__read-more:hover svg path,
+  .technics__read-more:hover svg path {
+    fill: #FF3E79;
+    transition: 0.3s ease-out;
   }
 
   .repair__title-block {
@@ -221,6 +276,22 @@
   }
 
 }
+
+/*?---------------PHONE MODAL------------------*/
+
+.modal__close-btn svg:hover rect {
+  fill: #FFE0E9;
+  transition: fill 0.3s ease-in-out;
+}
+
+.modal__close-btn svg:hover path {
+  fill: #FF3E79;
+  transition: fill 0.3s ease-in-out;
+}
+
+/*? ------------------------------------------ */
+
+
 
 /*! ///////////////////////////////////////////////////////// */
 @media (min-width: 1025px) {

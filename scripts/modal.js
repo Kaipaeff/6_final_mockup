@@ -1,24 +1,36 @@
 
-const modal = document.querySelector('.phone-modal');
-const modalBox = document.querySelector('.phone-modal__box');
-const showModalBtn = document.querySelector('.control-list__item--phone-modal');
-const closeModalBtn = document.getElementById('close-modal-btn');
+const modal = document.querySelector('.modal');
+const showModalBtn = document.querySelectorAll('.control-list__item--phone-modal');
+const closeModalBtn = document.querySelector('.modal__close-btn');
+const overlay = document.querySelector('.modal-overlay')
+const navToggleIntoModal = document.getElementById('nav__toggle');
 
 let isModalOpen = false;
 
-showModalBtn.addEventListener('click', (event) => {
-  modal.showModal();
-  isModalOpen = true;
+showModalBtn.forEach((el) => {
+  el.addEventListener('click', (event) => {
+    modal.classList.add('show');
+    overlay.style.opacity = '1';
+    overlay.style.pointerEvents = 'visiblePainted';
+    isModalOpen = true;
+    navToggleIntoModal.checked = false;
+    event.stopPropagation();
+  });
+})
+
+closeModalBtn.addEventListener('click', (event) => {
+  modal.classList.remove('show');
+  overlay.style.opacity = '0';
+  overlay.style.pointerEvents = 'none';
+  isModalOpen = false;
   event.stopPropagation();
 });
 
-closeModalBtn.addEventListener('click', (event) => {
-  modal.close();
-  isModalOpen = false;
-});
-
 document.addEventListener('click', (event) => {
-  if (isModalOpen && !modalBox.contains(event.target)) {
-    modal.close();
+  if (isModalOpen && !modal.contains(event.target)) {
+    modal.classList.remove('show');
+    overlay.style.opacity = '0';
+    overlay.style.pointerEvents = 'none';
+    event.stopPropagation();
   }
 });
