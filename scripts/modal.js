@@ -2,7 +2,7 @@
 const modal = document.querySelector('.modal');
 const showModalBtn = document.querySelectorAll('.control-list__item--phone-modal');
 const closeModalBtn = document.querySelector('.modal__close-btn');
-const overlay = document.querySelector('.modal-overlay')
+const overlay = document.querySelector('.header__modal-overlay')
 const navToggleIntoModal = document.getElementById('nav__toggle');
 
 let isModalOpen = false;

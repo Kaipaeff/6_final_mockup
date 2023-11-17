@@ -275,21 +275,61 @@
     transition: 0.3s ease-out;
   }
 
+
+
+  /*?---------------PHONE MODAL------------------*/
+  .header__phone-modal {
+    right: -520px;
+    width: 440px;
+    padding: 40px 32px;
+    border-left: 1px solid #D9FFF5;
+  }
+
+  .show {
+    transform: translateX(-520px);
+    z-index: 2;
+  }
+
+  .modal__title::before {
+    left: -33px;
+    top: -8px;
+  }
+
+  .modal__close-btn svg:hover rect {
+    fill: #FFE0E9;
+    transition: fill 0.3s ease-in-out;
+  }
+
+  .modal__close-btn svg:hover path {
+    fill: #FF3E79;
+    transition: fill 0.3s ease-in-out;
+  }
+
+  .form__btn:hover {
+    background-color: #FFE0E9;
+    color: #FF3E79;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .form__btn:hover svg path {
+    fill: #FF3E79;
+    transition: fill 0.3s ease-in-out;
+  }
+
+  .form__btn {
+    cursor: pointer;
+  }
+
+  .modal__close-btn {
+    position: absolute;
+    left: -72px;
+    top: 32px;
+    cursor: pointer;
+  }
+
+  /*? ------------------------------------------ */
+
 }
-
-/*?---------------PHONE MODAL------------------*/
-
-.modal__close-btn svg:hover rect {
-  fill: #FFE0E9;
-  transition: fill 0.3s ease-in-out;
-}
-
-.modal__close-btn svg:hover path {
-  fill: #FF3E79;
-  transition: fill 0.3s ease-in-out;
-}
-
-/*? ------------------------------------------ */
 
 
 
