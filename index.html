@@ -22,7 +22,7 @@
 <body class="page">
   <header class="page__header header">
     <nav class="header__nav nav">
-      <input type="checkbox" id="nav__toggle" hidden>
+      <input type="checkbox" id="nav__toggle" hidden checked>
       <label class="nav__label" for="nav__toggle">
         <div class="nav__icon">
           <span class="nav__line"></span>
@@ -34,6 +34,33 @@
       <div class="nav__sidebar-overlay" id="nav__sidebar-overlay"></div>
 
       <div class="nav__sidebar sidebar">
+
+        <div class="sidebar__header">
+          <button class="modal__close-btn sidebar__close-btn">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="40" height="40" rx="20" fill="#FF3E79" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M13.7935 12.2571C13.403 11.8666 12.7698 11.8666 12.3793 12.2571L12.2571 12.3793C11.8666 12.7698 11.8666 13.403 12.2571 13.7935L18.4636 20L12.2571 26.2065C11.8666 26.597 11.8666 27.2302 12.2571 27.6207L12.3793 27.7429C12.7698 28.1334 13.403 28.1334 13.7935 27.7429L20 21.5364L26.2065 27.7429C26.597 28.1334 27.2302 28.1334 27.6207 27.7429L27.7429 27.6207C28.1334 27.2302 28.1334 26.597 27.7429 26.2065L21.5364 20L27.7429 13.7935C28.1334 13.403 28.1334 12.7698 27.7429 12.3793L27.6207 12.2571C27.2302 11.8666 26.597 11.8666 26.2065 12.2571L20 18.4636L13.7935 12.2571Z"
+                fill="white" />
+            </svg>
+          </button>
+
+          <a href="#" class="sidebar__logo" aria-label="Главная">
+            <img src="./img/images/logo.png" class="sidebar__logo-image" alt="Логотип">
+          </a>
+
+          <button class="sidebar__search-btn">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="40" height="40" rx="20" fill="#FF3E79" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M23.5006 22.0006H22.7106L22.4306 21.7306C23.6306 20.3306 24.2506 18.4206 23.9106 16.3906C23.4406 13.6106 21.1206 11.3906 18.3206 11.0506C14.0906 10.5306 10.5306 14.0906 11.0506 18.3206C11.3906 21.1206 13.6106 23.4406 16.3906 23.9106C18.4206 24.2506 20.3306 23.6306 21.7306 22.4306L22.0006 22.7106V23.5006L26.2606 27.7506C26.6706 28.1606 27.3306 28.1606 27.7406 27.7506L27.7506 27.7406C28.1606 27.3306 28.1606 26.6706 27.7506 26.2606L23.5006 22.0006ZM17.5006 22.0006C15.0106 22.0006 13.0006 19.9906 13.0006 17.5006C13.0006 15.0106 15.0106 13.0006 17.5006 13.0006C19.9906 13.0006 22.0006 15.0106 22.0006 17.5006C22.0006 19.9906 19.9906 22.0006 17.5006 22.0006Z"
+                fill="white" />
+            </svg>
+          </button>
+
+
+        </div>
+
         <ul class="sidebar__menu-list">
           <li class="sidebar__menu-item">
             <input type="radio" id="sidebar__toggle-1" name="sidebar-tabs" hidden>
@@ -71,14 +98,12 @@
 
         <ul class="sidebar__control-list control-list">
           <li class="sidebar__control-item control-list__item--phone-modal">
-            <!-- <a href="tel:+78008908900" class="sidebar__control-link" aria-label="Позвонить"> -->
             <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect width="40" height="40" rx="20" fill="#FF3E79" />
               <path fill-rule="evenodd" clip-rule="evenodd"
                 d="M12.7602 23.25L15.3002 22.96C15.9102 22.89 16.5102 23.1 16.9402 23.53L18.7802 25.37C21.6102 23.93 23.9302 21.62 25.3702 18.78L23.5202 16.93C23.0902 16.5 22.8802 15.9 22.9502 15.29L23.2402 12.77C23.3602 11.76 24.2102 11 25.2302 11H26.9602C28.0902 11 29.0302 11.94 28.9602 13.07C28.4302 21.61 21.6002 28.43 13.0702 28.96C11.9402 29.03 11.0002 28.09 11.0002 26.96V25.23C10.9902 24.22 11.7502 23.37 12.7602 23.25Z"
                 fill="white" />
             </svg>
-            <!-- </a> -->
           </li>
 
           <li class="sidebar__control-item">

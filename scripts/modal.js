@@ -1,7 +1,7 @@
 
 const modal = document.querySelector('.modal');
 const showModalBtn = document.querySelectorAll('.control-list__item--phone-modal');
-const closeModalBtn = document.querySelector('.modal__close-btn');
+const closeModalBtn = document.querySelectorAll('.modal__close-btn');
 const overlay = document.querySelector('.header__modal-overlay')
 const navToggleIntoModal = document.getElementById('nav__toggle');
 
@@ -18,13 +18,16 @@ showModalBtn.forEach((el) => {
   });
 })
 
-closeModalBtn.addEventListener('click', (event) => {
-  modal.classList.remove('show');
-  overlay.style.opacity = '0';
-  overlay.style.pointerEvents = 'none';
-  isModalOpen = false;
-  event.stopPropagation();
-});
+closeModalBtn.forEach((el) => {
+  el.addEventListener('click', (event) => {
+    modal.classList.remove('show');
+    overlay.style.opacity = '0';
+    overlay.style.pointerEvents = 'none';
+    isModalOpen = false;
+    navToggleIntoModal.checked = false;
+    event.stopPropagation();
+  });
+})
 
 document.addEventListener('click', (event) => {
   if (isModalOpen && !modal.contains(event.target)) {

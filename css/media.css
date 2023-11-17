@@ -9,6 +9,12 @@
     margin-right: 20px;
   }
 
+  .nav__icon,
+  .sidebar__menu-tab,
+  .services__tab {
+    cursor: pointer;
+  }
+
   .header__nav:hover {
     background-color: #FFE0E9;
     transition: background-color 0.3s ease;
@@ -20,7 +26,31 @@
   }
 
   .nav__sidebar {
-    padding: 32px 24px;
+    padding: 24px;
+  }
+
+  .sidebar__header {
+    margin-bottom: 32px;
+  }
+
+  .sidebar__logo {
+    margin-left: 60px;
+  }
+
+  .sidebar__search-btn {
+    cursor: pointer;
+  }
+
+  .modal__close-btn.sidebar__close-btn {
+    left: 24px;
+    top: 30px;
+    padding: 0;
+    margin-right: 16px;
+    margin-bottom: 0;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: transparent;
   }
 
   .header__nav-divider {
@@ -121,7 +151,6 @@
   .sidebar__menu-tab:hover {
     color: #FF3E79;
     transition: 0.2s ease-in;
-    cursor: pointer;
   }
 
   .sidebar__menu-tab::before {
@@ -168,6 +197,7 @@
   .technics__read-more:hover {
     color: #FF3E79;
     transition: 0.3s ease-out;
+    cursor: pointer;
   }
 
   .services__read-more:hover svg path,
@@ -281,7 +311,7 @@
   .header__phone-modal {
     right: -520px;
     width: 440px;
-    padding: 40px 32px;
+    padding: 38px 32px;
     border-left: 1px solid #D9FFF5;
   }
 
@@ -295,12 +325,14 @@
     top: -8px;
   }
 
-  .modal__close-btn svg:hover rect {
+  .modal__close-btn svg:hover rect,
+  .sidebar__search-btn svg:hover rect {
     fill: #FFE0E9;
     transition: fill 0.3s ease-in-out;
   }
 
-  .modal__close-btn svg:hover path {
+  .modal__close-btn svg:hover path,
+  .sidebar__search-btn svg:hover path {
     fill: #FF3E79;
     transition: fill 0.3s ease-in-out;
   }
@@ -323,7 +355,8 @@
   .modal__close-btn {
     position: absolute;
     left: -72px;
-    top: 32px;
+    top: 30px;
+    margin-bottom: 0;
     cursor: pointer;
   }
 
@@ -341,7 +374,7 @@
   }
 
   .nav__sidebar {
-    padding: 32px;
+    padding: 24px 32px;
   }
 
   .sidebar__menu-list input[type="radio"]:checked+label::before {
@@ -354,6 +387,11 @@
 
   .sidebar__menu-tab:hover::before {
     left: -32px;
+  }
+
+  .modal__close-btn.sidebar__close-btn {
+    left: 32px;
+    top: 30px;
   }
 
   .page__main {

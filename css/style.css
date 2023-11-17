@@ -89,7 +89,6 @@ body {
   flex-direction: column;
   gap: 5px;
   padding: 10px;
-  /* cursor: pointer; */
 }
 
 .nav__line {
@@ -138,7 +137,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 32px 16px;
+  padding: 24px 16px;
   background-color: #fff;
   /* box-shadow: 10px 16px 25px 0px rgba(14, 24, 80, 0.20), 10px 16px 8px 0px rgba(69, 79, 126, 0.02); */
   box-shadow: 10px 0 25px 0px rgba(14, 24, 80, 0.20), 10px 0 8px 0px rgba(69, 79, 126, 0.02);
@@ -167,6 +166,36 @@ body {
 #nav__toggle:checked~.nav__sidebar-overlay {
   opacity: 1;
   pointer-events: visiblePainted;
+}
+
+.sidebar__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.modal__close-btn.sidebar__close-btn {
+  padding: 0;
+  /* margin-right: 16px; */
+  margin-bottom: 0;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: transparent;
+}
+
+.sidebar__logo {
+  margin-left: 20px;
+}
+
+.sidebar__search-btn {
+  padding: 0;
+  margin-left: auto;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: transparent;
 }
 
 .sidebar__menu-list {
@@ -211,7 +240,6 @@ body {
   font-weight: 500;
   letter-spacing: -0.2px;
   color: #1B1C21;
-  /* cursor: pointer; */
 }
 
 /* .sidebar__menu-tab:hover {
@@ -347,7 +375,7 @@ body {
   right: -330px;
   width: 320px;
   min-height: 100vh;
-  padding: 32px 16px;
+  padding: 30px 16px;
   margin: 0;
   border: none;
   background-color: #fff;
@@ -527,7 +555,6 @@ body {
   font-weight: 500;
   letter-spacing: -0.2px;
   color: #7E7E82;
-  /* cursor: pointer; */
 }
 
 .services__content {
@@ -577,7 +604,6 @@ body {
   font-weight: 500;
   letter-spacing: -0.2px;
   color: #1B1C21;
-  /* cursor: pointer; */
 }
 
 /* .services__read-more:hover,
