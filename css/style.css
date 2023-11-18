@@ -108,8 +108,8 @@ body {
 }
 
 
-/*! анимирую поведение burger-button ----------------------------*/
-#nav__toggle:checked+.nav__label .nav__line:nth-child(1) {
+/*! анимирую поведение кнопки burger-button ----------------------------*/
+/* #nav__toggle:checked+.nav__label .nav__line:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
 
@@ -120,7 +120,7 @@ body {
 #nav__toggle:checked+.nav__label .nav__line:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -5px);
   width: 18px;
-}
+} */
 
 /*! ------------------------------------------------------------- */
 
@@ -128,18 +128,15 @@ body {
 /*! стилизация САЙДБАРА ----------------------------------------- */
 .nav__sidebar {
   position: fixed;
-  /* top: var(--header-default-height); */
   top: 0;
   left: -350px;
   width: 320px;
-  /* height: calc(100vh - var(--header-default-height)); */
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 24px 16px;
   background-color: #fff;
-  /* box-shadow: 10px 16px 25px 0px rgba(14, 24, 80, 0.20), 10px 16px 8px 0px rgba(69, 79, 126, 0.02); */
   box-shadow: 10px 0 25px 0px rgba(14, 24, 80, 0.20), 10px 0 8px 0px rgba(69, 79, 126, 0.02);
   z-index: 2;
   transition: transform 0.3s ease-out;
@@ -147,7 +144,6 @@ body {
 
 .nav__sidebar-overlay {
   position: fixed;
-  /* top: var(--header-default-height); */
   top: 0;
   left: 0;
   width: 100%;
@@ -177,7 +173,6 @@ body {
 
 .modal__close-btn.sidebar__close-btn {
   padding: 0;
-  /* margin-right: 16px; */
   margin-bottom: 0;
   width: 40px;
   height: 40px;
@@ -242,11 +237,6 @@ body {
   color: #1B1C21;
 }
 
-/* .sidebar__menu-tab:hover {
-  color: #FF3E79;
-  transition: 0.2s ease-in;
-} */
-
 .sidebar__menu-tab::before {
   content: "";
   position: absolute;
@@ -258,12 +248,6 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 }
-
-/* .sidebar__menu-tab:hover::before {
-  width: 4px;
-  background: url('../img/icons/highlight-sidebar-hover.svg');
-  transition: 0.2s ease-in;
-} */
 
 .sidebar__address {
   display: flex;
@@ -321,11 +305,6 @@ body {
   color: #7E7E82;
 }
 
-/* .sidebar__lang-item input:not(:checked)+label:hover {
-  color: #FF3E79;
-  cursor: pointer;
-} */
-
 
 /*! ------------------------------------------------------------- */
 
@@ -362,10 +341,6 @@ body {
 .service-list__item {
   height: 40px;
 }
-
-/* .service-list__item:hover {
-  height: 40px;
-} */
 
 
 /*?---------------PHONE MODAL------------------*/
@@ -605,20 +580,6 @@ body {
   letter-spacing: -0.2px;
   color: #1B1C21;
 }
-
-/* .services__read-more:hover,
-.brands__read-more:hover,
-.technics__read-more:hover {
-  color: #FF3E79;
-  transition: 0.3s ease-out;
-}
-
-.services__read-more:hover svg path,
-.brands__read-more:hover svg path,
-.technics__read-more:hover svg path {
-  fill: #FF3E79;
-  transition: 0.3s ease-out;
-} */
 
 /* Показываю скрытую часть текста после активации чекбокса */
 #show-more:checked~.services__descr--hidden-320 {

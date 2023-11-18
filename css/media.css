@@ -157,10 +157,6 @@
     left: -24px;
   }
 
-  /* .sidebar__menu-tab:hover::before {
-    left: -24px;
-  } */
-
   .sidebar__menu-tab:hover::before {
     left: -24px;
     width: 4px;

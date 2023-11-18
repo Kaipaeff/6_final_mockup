@@ -22,7 +22,7 @@
 <body class="page">
   <header class="page__header header">
     <nav class="header__nav nav">
-      <input type="checkbox" id="nav__toggle" hidden checked>
+      <input type="checkbox" id="nav__toggle" hidden>
       <label class="nav__label" for="nav__toggle">
         <div class="nav__icon">
           <span class="nav__line"></span>
@@ -36,7 +36,7 @@
       <div class="nav__sidebar sidebar">
 
         <div class="sidebar__header">
-          <button class="modal__close-btn sidebar__close-btn">
+          <button class="sidebar__close-btn modal__close-btn">
             <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect width="40" height="40" rx="20" fill="#FF3E79" />
               <path fill-rule="evenodd" clip-rule="evenodd"
@@ -96,8 +96,9 @@
           </li>
         </ul>
 
-        <ul class="sidebar__control-list control-list">
-          <li class="sidebar__control-item control-list__item--phone-modal">
+        <!--! МЕНЮ УПРАВЛЕНИЯ САЙДБАРА -->
+        <ul class="sidebar__control-list">
+          <li class="sidebar__control-item phone-modalBtn">
             <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect width="40" height="40" rx="20" fill="#FF3E79" />
               <path fill-rule="evenodd" clip-rule="evenodd"
@@ -106,22 +107,13 @@
             </svg>
           </li>
 
-          <li class="sidebar__control-item">
-            <a href="mailto:mail@cps.com?subject=Запрос%20с%20сайта" class="sidebar__control-link" aria-label="Написать">
-              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="40" height="40" rx="20" fill="#FF3E79" />
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M28 11H12C10.9 11 10.01 11.9 10.01 13L10 31L14 26H28C29.1 26 30 25.1 30 24V13C30 11.9 29.1 11 28 11ZM21 22H15C14.45 22 14 21.55 14 21C14 20.45 14.45 20 15 20H21C21.55 20 22 20.45 22 21C22 21.55 21.55 22 21 22ZM25 17H15C14.45 17 14 16.55 14 16C14 15.45 14.45 15 15 15H25C25.55 15 26 15.45 26 16C26 16.55 25.55 17 25 17Z"
-                  fill="white" />
-                <mask id="mask0_0_1880" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="10" y="11" width="20" height="20">
-                  <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M28 11H12C10.9 11 10.01 11.9 10.01 13L10 31L14 26H28C29.1 26 30 25.1 30 24V13C30 11.9 29.1 11 28 11ZM21 22H15C14.45 22 14 21.55 14 21C14 20.45 14.45 20 15 20H21C21.55 20 22 20.45 22 21C22 21.55 21.55 22 21 22ZM25 17H15C14.45 17 14 16.55 14 16C14 15.45 14.45 15 15 15H25C25.55 15 26 15.45 26 16C26 16.55 25.55 17 25 17Z"
-                    fill="white" />
-                </mask>
-                <g mask="url(#mask0_0_1880)">
-                </g>
-              </svg>
-            </a>
+          <li class="sidebar__control-item feedback-modalBtn">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="40" height="40" rx="20" fill="#FF3E79" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M28 11H12C10.9 11 10.01 11.9 10.01 13L10 31L14 26H28C29.1 26 30 25.1 30 24V13C30 11.9 29.1 11 28 11ZM21 22H15C14.45 22 14 21.55 14 21C14 20.45 14.45 20 15 20H21C21.55 20 22 20.45 22 21C22 21.55 21.55 22 21 22ZM25 17H15C14.45 17 14 16.55 14 16C14 15.45 14.45 15 15 15H25C25.55 15 26 15.45 26 16C26 16.55 25.55 17 25 17Z"
+                fill="white" />
+            </svg>
           </li>
 
           <li class="sidebar__control-item">
@@ -168,8 +160,9 @@
       <img src="./img/images/logo.png" class="header__logo-image" alt="Логотип">
     </a>
 
+    <!--! МЕНЮ УПРАВЛЕНИЯ ХЭДЭРА -->
     <ul class="header__control-list control-list">
-      <li class="control-list__item control-list__item--phone-modal">
+      <li class="control-list__item phone-modalBtn">
         <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="40" height="40" rx="20" fill="#FF3E79" />
           <path fill-rule="evenodd" clip-rule="evenodd"
@@ -178,22 +171,13 @@
         </svg>
       </li>
 
-      <li class="control-list__item">
-        <a href="#" class="control-list__link" aria-label="Написать">
-          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="40" height="40" rx="20" fill="#FF3E79" />
-            <path fill-rule="evenodd" clip-rule="evenodd"
-              d="M28 11H12C10.9 11 10.01 11.9 10.01 13L10 31L14 26H28C29.1 26 30 25.1 30 24V13C30 11.9 29.1 11 28 11ZM21 22H15C14.45 22 14 21.55 14 21C14 20.45 14.45 20 15 20H21C21.55 20 22 20.45 22 21C22 21.55 21.55 22 21 22ZM25 17H15C14.45 17 14 16.55 14 16C14 15.45 14.45 15 15 15H25C25.55 15 26 15.45 26 16C26 16.55 25.55 17 25 17Z"
-              fill="white" />
-            <mask id="mask0_0_1880" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="10" y="11" width="20" height="20">
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M28 11H12C10.9 11 10.01 11.9 10.01 13L10 31L14 26H28C29.1 26 30 25.1 30 24V13C30 11.9 29.1 11 28 11ZM21 22H15C14.45 22 14 21.55 14 21C14 20.45 14.45 20 15 20H21C21.55 20 22 20.45 22 21C22 21.55 21.55 22 21 22ZM25 17H15C14.45 17 14 16.55 14 16C14 15.45 14.45 15 15 15H25C25.55 15 26 15.45 26 16C26 16.55 25.55 17 25 17Z"
-                fill="white" />
-            </mask>
-            <g mask="url(#mask0_0_1880)">
-            </g>
-          </svg>
-        </a>
+      <li class="control-list__item feedback-modalBtn">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="40" height="40" rx="20" fill="#FF3E79" />
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M28 11H12C10.9 11 10.01 11.9 10.01 13L10 31L14 26H28C29.1 26 30 25.1 30 24V13C30 11.9 29.1 11 28 11ZM21 22H15C14.45 22 14 21.55 14 21C14 20.45 14.45 20 15 20H21C21.55 20 22 20.45 22 21C22 21.55 21.55 22 21 22ZM25 17H15C14.45 17 14 16.55 14 16C14 15.45 14.45 15 15 15H25C25.55 15 26 15.45 26 16C26 16.55 25.55 17 25 17Z"
+            fill="white" />
+        </svg>
       </li>
 
       <li class="control-list__item">
@@ -229,7 +213,7 @@
         </h2>
 
         <form class="modal__form form" action="mailto:kaipaeff@gmail.com" enctype="text/plain" method="post">
-          <input class="form__input" type="tel" id="phone" name="phone" placeholder="+79281234567" pattern="\+\d{11}" required>
+          <input class="form__input" type="tel" id="phone" name="phone" placeholder="+79991234567" pattern="\+\d{11}" required>
 
           <p class="form__descr">
             Нажимая отправить, вы&nbsp;даете согласие на&nbsp;<span class="modal__pink">обработку персональных данных</span>
