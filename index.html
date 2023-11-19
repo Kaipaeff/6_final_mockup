@@ -21,7 +21,7 @@
 
 <body class="page">
   <header class="page__header header">
-    <nav class="header__nav nav">
+    <nav class="header__nav nav headerBtn" tabindex="0">
       <input type="checkbox" id="nav__toggle" hidden>
       <label class="nav__label" for="nav__toggle">
         <div class="nav__icon">
@@ -36,7 +36,8 @@
       <div class="nav__sidebar sidebar">
 
         <div class="sidebar__header">
-          <button class="sidebar__close-btn modal__close-btn">
+          <!--! кнопка Закрытия окна -->
+          <button class="sidebar__close-btn modal__close-btn headerBtn">
             <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect width="40" height="40" rx="20" fill="#FF3E79" />
               <path fill-rule="evenodd" clip-rule="evenodd"
@@ -49,7 +50,8 @@
             <img src="./img/images/logo.png" class="sidebar__logo-image" alt="Логотип">
           </a>
 
-          <button class="sidebar__search-btn">
+          <!--! кнопка Поиска -->
+          <button class="sidebar__search-btn headerBtn">
             <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect width="40" height="40" rx="20" fill="#FF3E79" />
               <path fill-rule="evenodd" clip-rule="evenodd"
@@ -98,7 +100,8 @@
 
         <!--! МЕНЮ УПРАВЛЕНИЯ САЙДБАРА -->
         <ul class="sidebar__control-list">
-          <li class="sidebar__control-item phone-modalBtn">
+          <!--! кнопка Позвонить -->
+          <li class="sidebar__control-item phone-modalBtn headerBtn" tabindex="0">
             <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect width="40" height="40" rx="20" fill="#FF3E79" />
               <path fill-rule="evenodd" clip-rule="evenodd"
@@ -107,7 +110,8 @@
             </svg>
           </li>
 
-          <li class="sidebar__control-item feedback-modalBtn">
+          <!--! кнопка Написать -->
+          <li class="sidebar__control-item feedback-modalBtn headerBtn" tabindex="0">
             <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect width="40" height="40" rx="20" fill="#FF3E79" />
               <path fill-rule="evenodd" clip-rule="evenodd"
@@ -116,18 +120,17 @@
             </svg>
           </li>
 
-          <li class="sidebar__control-item">
-            <a href="#" class="sidebar__control-link" aria-label="Личный кабинет">
-              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="40" height="40" rx="20" fill="#FF3E79" />
-                <path
-                  d="M20.5 19C22.9853 19 25 16.9853 25 14.5C25 12.0147 22.9853 10 20.5 10C18.0147 10 16 12.0147 16 14.5C16 16.9853 18.0147 19 20.5 19Z"
-                  fill="white" />
-                <path
-                  d="M10.0166 26.6118C9.88693 27.3412 10.5352 28 11.339 28H28.6604C29.4902 28 30.1125 27.3412 29.9829 26.6118C29.2309 22.4 25.0561 20 19.9997 20C14.9433 20 10.7686 22.4 10.0166 26.6118Z"
-                  fill="white" />
-              </svg>
-            </a>
+          <!--! кнопка Личный кабинет -->
+          <li class="sidebar__control-item headerBtn" tabindex="0">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="40" height="40" rx="20" fill="#FF3E79" />
+              <path
+                d="M20.5 19C22.9853 19 25 16.9853 25 14.5C25 12.0147 22.9853 10 20.5 10C18.0147 10 16 12.0147 16 14.5C16 16.9853 18.0147 19 20.5 19Z"
+                fill="white" />
+              <path
+                d="M10.0166 26.6118C9.88693 27.3412 10.5352 28 11.339 28H28.6604C29.4902 28 30.1125 27.3412 29.9829 26.6118C29.2309 22.4 25.0561 20 19.9997 20C14.9433 20 10.7686 22.4 10.0166 26.6118Z"
+                fill="white" />
+            </svg>
           </li>
         </ul>
 
@@ -162,7 +165,8 @@
 
     <!--! МЕНЮ УПРАВЛЕНИЯ ХЭДЭРА -->
     <ul class="header__control-list control-list">
-      <li class="control-list__item phone-modalBtn">
+      <!--! кнопка Позвонить -->
+      <li class="control-list__item phone-modalBtn headerBtn" tabindex="0">
         <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="40" height="40" rx="20" fill="#FF3E79" />
           <path fill-rule="evenodd" clip-rule="evenodd"
@@ -171,7 +175,8 @@
         </svg>
       </li>
 
-      <li class="control-list__item feedback-modalBtn">
+      <!--! кнопка Написать -->
+      <li class="control-list__item feedback-modalBtn headerBtn" tabindex="0">
         <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="40" height="40" rx="20" fill="#FF3E79" />
           <path fill-rule="evenodd" clip-rule="evenodd"
@@ -180,26 +185,26 @@
         </svg>
       </li>
 
-      <li class="control-list__item">
-        <a href="#" class="control-list__link" aria-label="Личный кабинет">
-          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="40" height="40" rx="20" fill="#FF3E79" />
-            <path
-              d="M20.5 19C22.9853 19 25 16.9853 25 14.5C25 12.0147 22.9853 10 20.5 10C18.0147 10 16 12.0147 16 14.5C16 16.9853 18.0147 19 20.5 19Z"
-              fill="white" />
-            <path
-              d="M10.0166 26.6118C9.88693 27.3412 10.5352 28 11.339 28H28.6604C29.4902 28 30.1125 27.3412 29.9829 26.6118C29.2309 22.4 25.0561 20 19.9997 20C14.9433 20 10.7686 22.4 10.0166 26.6118Z"
-              fill="white" />
-          </svg>
-        </a>
+      <!--! кнопка Личный кабинет -->
+      <li class="control-list__item headerBtn" tabindex="0">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="40" height="40" rx="20" fill="#FF3E79" />
+          <path
+            d="M20.5 19C22.9853 19 25 16.9853 25 14.5C25 12.0147 22.9853 10 20.5 10C18.0147 10 16 12.0147 16 14.5C16 16.9853 18.0147 19 20.5 19Z"
+            fill="white" />
+          <path
+            d="M10.0166 26.6118C9.88693 27.3412 10.5352 28 11.339 28H28.6604C29.4902 28 30.1125 27.3412 29.9829 26.6118C29.2309 22.4 25.0561 20 19.9997 20C14.9433 20 10.7686 22.4 10.0166 26.6118Z"
+            fill="white" />
+        </svg>
       </li>
     </ul>
 
     <div class="header__modal-overlay"></div>
 
-    <div class="header__phone-modal modal">
-      <div class="modal__content">
-        <button class="modal__close-btn">
+    <div class="header__modal modal">
+      <!--! Контент Заказать звонок -->
+      <div class="modal__content phone-content">
+        <button class="modal__close-btn headerBtn">
           <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="40" height="40" rx="20" fill="#FF3E79" />
             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -216,8 +221,45 @@
           <input class="form__input" type="tel" id="phone" name="phone" placeholder="+79991234567" pattern="\+\d{11}" required>
 
           <p class="form__descr">
-            Нажимая отправить, вы&nbsp;даете согласие на&nbsp;<span class="modal__pink">обработку персональных данных</span>
-            и&nbsp;соглашаетесь с&nbsp;нашей <span class="modal__pink">политикой конфиденциальности</span>
+            Нажимая отправить, вы&nbsp;даете согласие на&nbsp;<span class="descr__pink">обработку персональных данных</span>
+            и&nbsp;соглашаетесь с&nbsp;нашей <span class="descr__pink">политикой конфиденциальности</span>
+          </p>
+
+          <button class="form__btn" type="submit">Отправить
+            <svg width="8" height="10" viewBox="0 0 8 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M4.05715 4.99994L0.671893 2.27169C0.17799 1.87364 0.174734 1.12223 0.665171 0.719921L0.912566 0.516979C1.27952 0.215962 1.80752 0.214355 2.1763 0.513135L7.62225 4.92536C7.66966 4.96378 7.66966 5.0361 7.62225 5.07451L2.27541 9.40644C1.84893 9.75197 1.23832 9.75011 0.813948 9.402C0.246776 8.93674 0.25054 8.06777 0.821721 7.60744L4.05715 4.99994Z"
+                fill="white" />
+            </svg>
+          </button>
+        </form>
+      </div>
+
+      <!--! Контент Обратная связь -->
+      <div class="modal__content write-content">
+        <button class="modal__close-btn headerBtn">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" rx="20" fill="#FF3E79" />
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M13.7935 12.2571C13.403 11.8666 12.7698 11.8666 12.3793 12.2571L12.2571 12.3793C11.8666 12.7698 11.8666 13.403 12.2571 13.7935L18.4636 20L12.2571 26.2065C11.8666 26.597 11.8666 27.2302 12.2571 27.6207L12.3793 27.7429C12.7698 28.1334 13.403 28.1334 13.7935 27.7429L20 21.5364L26.2065 27.7429C26.597 28.1334 27.2302 28.1334 27.6207 27.7429L27.7429 27.6207C28.1334 27.2302 28.1334 26.597 27.7429 26.2065L21.5364 20L27.7429 13.7935C28.1334 13.403 28.1334 12.7698 27.7429 12.3793L27.6207 12.2571C27.2302 11.8666 26.597 11.8666 26.2065 12.2571L20 18.4636L13.7935 12.2571Z"
+              fill="white" />
+          </svg>
+        </button>
+
+        <h2 class="modal__title">
+          Обратная связь
+        </h2>
+
+        <form class="modal__form form" action="mailto:kaipaeff@gmail.com" enctype="text/plain" method="post">
+          <input class="form__input" type="text" id="name" name="name" placeholder="Имя" required>
+          <input class="form__input" type="tel" id="phone" name="phone" placeholder="+79991234567" pattern="\+\d{11}" required>
+          <input class="form__input" type="email" id="email" name="email" placeholder="Электронная почта" required>
+
+          <textarea class="form__input form-area" name="message" id="message" placeholder="Сообщение" required></textarea>
+
+          <p class="form__descr">
+            Нажимая отправить, вы&nbsp;даете согласие на&nbsp;<span class="descr__pink">обработку персональных данных</span>
+            и&nbsp;соглашаетесь с&nbsp;нашей <span class="descr__pink">политикой конфиденциальности</span>
           </p>
 
           <button class="form__btn" type="submit">Отправить

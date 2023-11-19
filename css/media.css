@@ -304,7 +304,7 @@
 
 
   /*?---------------PHONE MODAL------------------*/
-  .header__phone-modal {
+  .header__modal {
     right: -520px;
     width: 440px;
     padding: 38px 32px;
@@ -356,7 +356,13 @@
     cursor: pointer;
   }
 
+
   /*? ------------------------------------------ */
+
+  .headerBtn:focus {
+    border-radius: 50%;
+    box-shadow: 0 0 5px #FF3E79;
+  }
 
 }
 

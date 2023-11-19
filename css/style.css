@@ -91,6 +91,12 @@ body {
   padding: 10px;
 }
 
+/* отключаю обводку автофокуса на этих элементах */
+.header__nav:focus,
+.control-list__item:focus {
+  outline: none;
+}
+
 .nav__line {
   width: 18px;
   height: 2px;
@@ -306,7 +312,7 @@ body {
 }
 
 
-/*! ------------------------------------------------------------- */
+/*! КОНЕЦ СТИЛИЗАЦИИ САЙДБАРА --------------------------------- */
 
 
 .header__logo {
@@ -344,7 +350,7 @@ body {
 
 
 /*?---------------PHONE MODAL------------------*/
-.header__phone-modal {
+.header__modal {
   position: fixed;
   top: 0;
   right: -330px;
@@ -413,11 +419,16 @@ body {
   outline: 1px solid #FFE0E9;
 }
 
+.form-area {
+  min-height: 116px;
+  resize: none;
+}
+
 .form__descr {
   margin: 0;
 }
 
-.modal__pink {
+.descr__pink {
   color: #FF3E79;
 }
 
