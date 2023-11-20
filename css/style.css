@@ -668,14 +668,14 @@ body {
 }
 
 .repair__swiper-wrapper,
-.repair__swiper-wrapper--various {
+.repair__swiper-wrapper--various,
+.prices__swiper-wrapper {
   margin: 0;
   padding: 0;
 }
 
-.repair__swiper-pagination {
+.swiper-pagination {
   position: fixed;
-  top: 93px !important;
   --swiper-pagination-bullet-inactive-color: #9c9c9c;
   --swiper-theme-color: #B5B6BC;
   --swiper-pagination-bullet-width: 12px;
@@ -683,15 +683,104 @@ body {
   z-index: 1 !important;
 }
 
-.repair__swiper-pagination--various {
-  position: fixed;
-  top: 170px !important;
-  --swiper-pagination-bullet-inactive-color: #9c9c9c;
+.repair__swiper-pagination {
+  /* position: fixed; */
+  top: 93px !important;
+  /* --swiper-pagination-bullet-inactive-color: #9c9c9c;
   --swiper-theme-color: #B5B6BC;
   --swiper-pagination-bullet-width: 12px;
   --swiper-pagination-bullet-height: 12px;
-  z-index: 1 !important;
+  z-index: 1 !important; */
 }
+
+.repair__swiper-pagination--various {
+  /* position: fixed; */
+  top: 170px !important;
+  /* --swiper-pagination-bullet-inactive-color: #9c9c9c;
+  --swiper-theme-color: #B5B6BC;
+  --swiper-pagination-bullet-width: 12px;
+  --swiper-pagination-bullet-height: 12px;
+  z-index: 1 !important; */
+}
+
+/*!----------------- SWIPER PRICES ---------------------- */
+
+.prices__swiper-container {
+  overflow: auto;
+  position: relative;
+  min-width: 288px;
+  width: 100%;
+  height: 228px;
+  margin: 0 auto;
+  margin-bottom: 24px;
+}
+
+.swiper-wrapper .prices__swiper-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+  height: 200px;
+  border-radius: 6px;
+  background: #FFF;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.service-type__title,
+.service-price__title,
+.service-time__title {
+  color: #7E7E82;
+  font-size: 14px;
+  font-weight: 500;
+  opacity: 0.7;
+  margin: 0;
+  margin-bottom: 4px;
+}
+
+.service-type__name,
+.service-price__name,
+.service-time__name {
+  color: #1B1C21;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+}
+
+.slide__service-time {
+  display: flex;
+
+}
+
+.service-time__button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-left: auto;
+  background-color: #FF3E79;
+  padding: 10px 16px 8px;
+  border: none;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #FFF;
+  text-transform: uppercase;
+  letter-spacing: -0.15px;
+}
+
+.service-time__button svg {
+  margin-bottom: 2px;
+}
+
+.prices__swiper-pagination {
+  top: 210px !important;
+}
+
+/*!-----------КОНЕЦ SWIPER PRICES ---------------------- */
+
 
 .brands__block-wrapper {
   display: grid;

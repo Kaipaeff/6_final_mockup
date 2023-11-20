@@ -27,8 +27,10 @@ function toggleModal(isOpen) {
 showModalBtn.forEach((el) => {
   el.addEventListener('click', (event) => {
     const isOpenAction = el.classList.contains('phone-modalBtn') || el.classList.contains('feedback-modalBtn');
+    
     const phoneModalBtn = el.classList.contains('phone-modalBtn');
     const writeModalBtn = el.classList.contains('feedback-modalBtn');
+    
     toggleModal(isOpenAction);
 
     if (phoneModalBtn) {
