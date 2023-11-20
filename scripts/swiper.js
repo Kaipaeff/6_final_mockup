@@ -22,7 +22,7 @@ new Swiper('.swiper-container', {
   centeredSlides: false,
 
   autoplay: {
-    delay: 9000,
+    delay: 10000,
     stopOnLastSlide: false,
     disableOnInteraction: false,
   },
