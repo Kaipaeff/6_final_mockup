@@ -71,7 +71,7 @@ new Swiper('.swiper-container', {
   // //! Адаптив, ширина экрана
   breakpoints: {
     320: {
-      slidesPerView: 1.25,
+      slidesPerView: 1.15,
     },
     340: {
       slidesPerView: 1.3,
