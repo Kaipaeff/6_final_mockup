@@ -61,7 +61,6 @@ function handleModalClose(event) {
     } else if (event.type === 'keydown' && event.key === 'Escape') {
       event.preventDefault();
       toggleModal(false);
-      document.activeElement.blur(); // Убрать фокус с текущего активного элемента
     }
   }
 }

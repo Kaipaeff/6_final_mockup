@@ -333,6 +333,10 @@
     transition: fill 0.3s ease-in-out;
   }
 
+  .form__btn {
+    cursor: pointer;
+  }
+
   .form__btn:hover {
     background-color: #FFE0E9;
     color: #FF3E79;
@@ -344,8 +348,8 @@
     transition: fill 0.3s ease-in-out;
   }
 
-  .form__btn {
-    cursor: pointer;
+  .form__btn:active {
+    box-shadow: 0 0 5px #FF3E79;
   }
 
   .modal__close-btn {
@@ -358,11 +362,10 @@
 
   /*? ------------------------------------------ */
 
-  .headerBtn:focus {
+  .headerBtn:active {
     border-radius: 50%;
     box-shadow: 0 0 5px #FF3E79;
   }
-
 
   /*!------------ SERVICES__PRICES --------------*/
 
@@ -420,6 +423,10 @@
 
   .service-time__button:hover svg path {
     fill: #FF3E79;
+  }
+
+  .service-time__button:active {
+    box-shadow: 0 0 5px #FF3E79;
   }
 
   /*!------------ КОНЕЦ SERVICES__PRICES --------------*/
