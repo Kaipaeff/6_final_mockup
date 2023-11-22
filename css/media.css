@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 2 version
+*/
+
 /*! ///////////////////////////////////////////////////////// */
 @media (min-width: 768px) {
 
@@ -17,11 +24,13 @@
 
   .header__nav:hover {
     background-color: #FFE0E9;
+    -webkit-transition: background-color 0.3s ease;
     transition: background-color 0.3s ease;
   }
 
   .header__nav:hover .nav__line {
     background-color: #FF3E79;
+    -webkit-transition: background-color 0.3s ease;
     transition: background-color 0.3s ease;
   }
 
@@ -54,6 +63,8 @@
   }
 
   .header__nav-divider {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     width: 2px;
     height: 32px;
@@ -67,8 +78,15 @@
   }
 
   .header__control-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     gap: 16px;
     margin-right: 20px;
@@ -90,12 +108,14 @@
   .control-list__item svg:hover rect,
   .service-list__item svg:hover rect {
     fill: #FFE0E9;
+    -webkit-transition: fill 0.3s ease-in-out;
     transition: fill 0.3s ease-in-out;
   }
 
   .control-list__item svg:hover path,
   .service-list__item svg:hover path {
     fill: #FF3E79;
+    -webkit-transition: fill 0.3s ease-in-out;
     transition: fill 0.3s ease-in-out;
   }
 
@@ -120,6 +140,22 @@
     margin-bottom: 32px;
   }
 
+  @-webkit-keyframes changeOutlineColor {
+    0% {
+      outline: 2px solid #F8F8F8;
+      border-radius: 6px;
+      background-color: #F8F8F8;
+      color: #7E7E82;
+    }
+
+    100% {
+      outline: 2px solid #FFE0E9;
+      border-radius: 6px;
+      background-color: #ffffff;
+      color: #FF3E79;
+    }
+  }
+
   @keyframes changeOutlineColor {
     0% {
       outline: 2px solid #F8F8F8;
@@ -137,6 +173,7 @@
   }
 
   .services__tab:not(:checked):hover {
+    -webkit-animation: changeOutlineColor 0.6s ease-out forwards;
     animation: changeOutlineColor 0.6s ease-out forwards;
   }
 
@@ -150,6 +187,7 @@
 
   .sidebar__menu-tab:hover {
     color: #FF3E79;
+    -webkit-transition: 0.2s ease-in;
     transition: 0.2s ease-in;
   }
 
@@ -161,6 +199,7 @@
     left: -24px;
     width: 4px;
     background: url('../img/icons/highlight-sidebar-hover.svg');
+    -webkit-transition: 0.2s ease-in;
     transition: 0.2s ease-in;
   }
 
@@ -174,8 +213,15 @@
   }
 
   .services__content {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
     align-items: flex-start;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     gap: 32px;
   }
@@ -192,6 +238,7 @@
   .brands__read-more:hover,
   .technics__read-more:hover {
     color: #FF3E79;
+    -webkit-transition: 0.3s ease-out;
     transition: 0.3s ease-out;
     cursor: pointer;
   }
@@ -200,6 +247,7 @@
   .brands__read-more:hover svg path,
   .technics__read-more:hover svg path {
     fill: #FF3E79;
+    -webkit-transition: 0.3s ease-out;
     transition: 0.3s ease-out;
   }
 
@@ -226,6 +274,8 @@
 
   /* Показываю скрытую часть блоков после активации чекбокса */
   #technics__show-more:checked~.technics__block-wrapper .technics__block.width-768 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
 
@@ -237,6 +287,7 @@
 
   /* Переворачиваю иконку кнопки "Скрыть" */
   #technics__show-more:checked~.technics__read-more svg {
+    -webkit-transform: rotate(180deg);
     transform: rotate(180deg);
   }
 
@@ -253,13 +304,17 @@
 
   .brands__block:hover img {
     margin-left: 2px;
+    -webkit-transform: scale(1.04);
     transform: scale(1.04);
+    -webkit-transition: 0.3s ease-out;
     transition: 0.3s ease-out;
   }
 
   .technics__block:hover .technics__content img {
     margin: 0 0 3px 3px;
+    -webkit-transform: scale(1.1);
     transform: scale(1.1);
+    -webkit-transition: 0.5s ease-out;
     transition: 0.5s ease-out;
   }
 
@@ -271,6 +326,16 @@
     border: none;
     background-color: transparent;
     cursor: pointer;
+  }
+
+  @-webkit-keyframes changeFillColor {
+    0% {
+      fill: #fff;
+    }
+
+    100% {
+      fill: #FFE0E9;
+    }
   }
 
   @keyframes changeFillColor {
@@ -285,6 +350,7 @@
 
   .brands__block:hover .brands__more-button svg,
   .technics__block:hover .technics__more-button svg {
+    -webkit-animation: changeFillColor 0.3s ease-out forwards;
     animation: changeFillColor 0.3s ease-out forwards;
   }
 
@@ -292,12 +358,14 @@
   .technics__more-button:active svg rect {
     stroke: #ffcddb;
     fill: #ffcddb;
+    -webkit-transition: 0.3s ease-out;
     transition: 0.3s ease-out;
   }
 
   .brands__block:hover,
   .technics__block:hover {
     border: 1px solid #FFE0E9;
+    -webkit-transition: 0.3s ease-out;
     transition: 0.3s ease-out;
   }
 
@@ -312,6 +380,7 @@
   }
 
   .show {
+    -webkit-transform: translateX(-520px);
     transform: translateX(-520px);
     z-index: 2;
   }
@@ -324,12 +393,14 @@
   .modal__close-btn svg:hover rect,
   .sidebar__search-btn svg:hover rect {
     fill: #FFE0E9;
+    -webkit-transition: fill 0.3s ease-in-out;
     transition: fill 0.3s ease-in-out;
   }
 
   .modal__close-btn svg:hover path,
   .sidebar__search-btn svg:hover path {
     fill: #FF3E79;
+    -webkit-transition: fill 0.3s ease-in-out;
     transition: fill 0.3s ease-in-out;
   }
 
@@ -340,15 +411,18 @@
   .form__btn:hover {
     background-color: #FFE0E9;
     color: #FF3E79;
+    -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
   }
 
   .form__btn:hover svg path {
     fill: #FF3E79;
+    -webkit-transition: fill 0.3s ease-in-out;
     transition: fill 0.3s ease-in-out;
   }
 
   .form__btn:active {
+    -webkit-box-shadow: 0 0 5px #FF3E79;
     box-shadow: 0 0 5px #FF3E79;
   }
 
@@ -364,13 +438,16 @@
 
   .headerBtn:active {
     border-radius: 50%;
+    -webkit-box-shadow: 0 0 5px #FF3E79;
     box-shadow: 0 0 5px #FF3E79;
   }
 
   /*!------------ SERVICES__PRICES --------------*/
 
   .prices__subtitle {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 3.5fr 1fr 2fr;
     grid-template-columns: 3.5fr 1fr 2fr;
     color: #7E7E82;
     font-size: 14px;
@@ -382,7 +459,12 @@
   }
 
   .prices__services-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     margin: 0;
     margin-bottom: 24px;
@@ -392,8 +474,12 @@
   }
 
   .prices__services-item {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 3.5fr 1fr 2fr;
     grid-template-columns: 3.5fr 1fr 2fr;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     padding: 16px 0;
   }
@@ -403,6 +489,8 @@
   }
 
   .slide__service-time {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
   }
 
@@ -418,6 +506,7 @@
     cursor: pointer;
     background-color: #FFE0E9;
     color: #FF3E79;
+    -webkit-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
   }
 
@@ -426,20 +515,33 @@
   }
 
   .service-time__button:active {
+    -webkit-box-shadow: 0 0 5px #FF3E79;
     box-shadow: 0 0 5px #FF3E79;
   }
 
   /*!------------ КОНЕЦ SERVICES__PRICES --------------*/
 
   .page__footer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     padding: 32px 24px 24px;
   }
 
   .footer__copiright {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
     align-items: flex-start;
   }
 
@@ -500,24 +602,88 @@
   }
 
   .brands__block-wrapper {
+    -ms-grid-columns: repeat(4, 224px);
     grid-template-columns: repeat(4, 224px);
+    -ms-grid-rows: 72px 24px 72px;
     grid-template-rows: repeat(2, 72px);
     row-gap: 24px;
   }
 
+  .brands__block-wrapper>*:nth-child(1) {
+    grid-row: 1;
+    grid-column: 1;
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+
+  .brands__block-wrapper>*:nth-child(2) {
+    grid-row: 1;
+    grid-column: 2;
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+
+  .brands__block-wrapper>*:nth-child(3) {
+    grid-row: 1;
+    grid-column: 3;
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+
+  .brands__block-wrapper>*:nth-child(4) {
+    grid-row: 1;
+    grid-column: 4;
+    -ms-grid-row: 1;
+    -ms-grid-column: 4;
+  }
+
+  .brands__block-wrapper>*:nth-child(5) {
+    grid-row: 3;
+    grid-column: 1;
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+
+  .brands__block-wrapper>*:nth-child(6) {
+    grid-row: 3;
+    grid-column: 2;
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+
+  .brands__block-wrapper>*:nth-child(7) {
+    grid-row: 3;
+    grid-column: 3;
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+  }
+
+  .brands__block-wrapper>*:nth-child(8) {
+    grid-row: 3;
+    grid-column: 4;
+    -ms-grid-row: 3;
+    -ms-grid-column: 4;
+  }
+
   .technics__block-wrapper {
+    -ms-grid-rows: 160px;
+    -ms-grid-columns: repeat(4, 224px);
     grid-template: 160px / repeat(4, 224px);
     row-gap: 24px;
   }
 
   .brands__block:hover img {
     margin-left: 2px;
+    -webkit-transform: scale(1.1);
     transform: scale(1.1);
+    -webkit-transition: 0.3s ease-out;
     transition: 0.3s ease-out;
   }
 
   .tablet-block,
   .width-768 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
 
@@ -528,6 +694,8 @@
 
   /* Показываю скрытую часть блоков после активации чекбокса */
   #brands__show-more:checked~.desktop-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
 
@@ -550,6 +718,7 @@
   }
 
   .brands__block-wrapper {
+    -ms-grid-columns: repeat(4, 240px);
     grid-template-columns: repeat(4, 240px);
   }
 
@@ -559,12 +728,16 @@
   }
 
   .technics__block-wrapper {
+    -ms-grid-rows: 160px;
+    -ms-grid-columns: repeat(4, 240px);
     grid-template: 160px / repeat(4, 240px);
   }
 
   .brands__block:hover img {
     margin-left: 8px;
+    -webkit-transform: scale(1.1);
     transform: scale(1.1);
+    -webkit-transition: 0.3s ease-out;
     transition: 0.3s ease-out;
   }
 
@@ -584,6 +757,7 @@
   }
 
   .brands__block-wrapper {
+    -ms-grid-columns: repeat(4, 280px);
     grid-template-columns: repeat(4, 280px);
     row-gap: 32px;
   }
@@ -598,6 +772,8 @@
   }
 
   .technics__block-wrapper {
+    -ms-grid-rows: 180px;
+    -ms-grid-columns: repeat(4, 280px);
     grid-template: 180px / repeat(4, 280px);
     row-gap: 32px;
   }
@@ -608,6 +784,7 @@
 @media (max-width: 319px) {
 
   .header__logo-image {
+    -webkit-transform: scale(0.9);
     transform: scale(0.9);
   }
 
