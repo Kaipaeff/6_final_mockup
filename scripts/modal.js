@@ -23,6 +23,16 @@ function toggleModal(isOpen) {
   navToggleCheckbox.checked = false;
 }
 
+function showPhoneContent() {
+  phoneContent.style.display = 'block';
+  writeContent.style.display = 'none';
+}
+
+function showWriteContent() {
+  phoneContent.style.display = 'none';
+  writeContent.style.display = 'block';
+}
+
 // Обработчик клика по кнопкам открытия модального окна
 showModalBtn.forEach((el) => {
   el.addEventListener('click', (event) => {
@@ -54,16 +64,6 @@ function handleModalClose(event) {
       document.activeElement.blur(); // Убрать фокус с текущего активного элемента
     }
   }
-}
-
-function showPhoneContent() {
-  phoneContent.style.display = 'block';
-  writeContent.style.display = 'none';
-}
-
-function showWriteContent() {
-  phoneContent.style.display = 'none';
-  writeContent.style.display = 'block';
 }
 
 // Обработчик клика и кнопки Escape для закрытия модального окна

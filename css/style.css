@@ -743,13 +743,13 @@ body {
 .slide__service-time {
   display: flex;
   align-items: flex-end;
+  justify-content: space-between;
 }
 
 .service-time__button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-left: auto;
   background-color: #FF3E79;
   width: 119px;
   height: 32px;
@@ -760,10 +760,16 @@ body {
   font-weight: 700;
   color: #FFF;
   text-transform: uppercase;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .service-time__button svg {
   margin-bottom: 2px;
+}
+
+.service-time__button svg path {
+  fill: #FFF;
+  transition: fill 0.3s ease-in-out;
 }
 
 .prices__swiper-pagination {

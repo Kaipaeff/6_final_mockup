@@ -411,6 +411,17 @@
     margin-bottom: 0;
   }
 
+  .service-time__button:hover {
+    cursor: pointer;
+    background-color: #FFE0E9;
+    color: #FF3E79;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+
+  .service-time__button:hover svg path {
+    fill: #FF3E79;
+  }
+
   /*!------------ КОНЕЦ SERVICES__PRICES --------------*/
 
   .page__footer {
@@ -515,6 +526,10 @@
 
   .repair__title-block::before {
     left: -32px;
+  }
+
+  .page__footer {
+    padding: 32px;
   }
 }
 
