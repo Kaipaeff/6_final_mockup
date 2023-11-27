@@ -5,11 +5,11 @@
 * Browsers: last 2 version
 */
 
-@font-face {
+/* @font-face {
   font-family: 'TTLakes';
   src: local('TTLakes-Light'),
-    url('../fonts/TTLakes-Light.woff2') format('woff2'),
-    url('../fonts/TTLakes-Light.woff') format('woff');
+    url('../assets/fonts/TTLakes-Light.woff2') format('woff2'),
+    url('../assets/fonts/TTLakes-Light.woff') format('woff');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -18,8 +18,8 @@
 @font-face {
   font-family: 'TTLakes';
   src: local('TTLakes-Regular'),
-    url('../fonts/TTLakes-Regular.woff2') format('woff2'),
-    url('../fonts/TTLakes-Regular.woff') format('woff');
+    url('../assets/fonts/TTLakes-Regular.woff2') format('woff2'),
+    url('../assets/fonts/TTLakes-Regular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -28,8 +28,8 @@
 @font-face {
   font-family: 'TTLakes';
   src: local('TTLakes-Medium'),
-    url('../fonts/TTLakes-Medium.woff2') format('woff2'),
-    url('../fonts/TTLakes-Medium.woff') format('woff');
+    url('../assets/fonts/TTLakes-Medium.woff2') format('woff2'),
+    url('../assets/fonts/TTLakes-Medium.woff') format('woff');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -38,12 +38,14 @@
 @font-face {
   font-family: 'TTLakes';
   src: local('TTLakes-Bold'),
-    url('../fonts/TTLakes-Bold.woff2') format('woff2'),
-    url('../fonts/TTLakes-Bold.woff') format('woff');
+    url('../assets/fonts/TTLakes-Bold.woff2') format('woff2'),
+    url('../assets/fonts/TTLakes-Bold.woff') format('woff');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
-}
+} */
+
+@import "fonts.css";
 
 /*! VARIABLES */
 
@@ -279,7 +281,7 @@ body {
 
 .sidebar__menu-item input:checked+label::before {
   content: "";
-  background-image: url('../img/icons/highlight-sidebar-default.svg');
+  background-image: url('../assets/img/icons/highlight-sidebar-default.svg');
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
@@ -308,7 +310,7 @@ body {
   left: -16px;
   width: 0;
   height: 32px;
-  background: url('../img/icons/highlight-sidebar-default.svg');
+  background: url('../assets/img/icons/highlight-sidebar-default.svg');
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -465,7 +467,7 @@ body {
 
 .modal__title::before {
   content: "";
-  background-image: url('../img/icons/highlight.svg');
+  background-image: url('../assets/img/icons/highlight.svg');
   background-size: contain;
   background-repeat: no-repeat;
   height: 40px;
@@ -633,7 +635,7 @@ body {
 
 .services__title::before {
   content: "";
-  background-image: url('../img/icons/highlight.svg');
+  background-image: url('../assets/img/icons/highlight.svg');
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
@@ -987,22 +989,22 @@ body {
 /*!-----------КОНЕЦ SWIPER PRICES ---------------------- */
 
 .brands__block-wrapper {
-  display: -ms-grid;
+  /* display: -ms-grid; */
   display: grid;
-  -ms-grid-columns: repeat(3, 224px);
+  /* -ms-grid-columns: repeat(3, 224px); */
   grid-template-columns: repeat(3, 224px);
-  -ms-grid-rows: 72px 16px 72px;
+  /* -ms-grid-rows: 72px 16px 72px; */
   grid-template-rows: repeat(2, 72px);
   row-gap: 16px;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
+  /* -webkit-box-pack: justify; */
+  /* -ms-flex-pack: justify; */
   justify-content: space-between;
   margin: 0;
   padding: 0;
   margin-bottom: 24px;
 }
 
-.brands__block-wrapper>*:nth-child(1) {
+/* .brands__block-wrapper>*:nth-child(1) {
   grid-row: 1;
   grid-column: 1;
   -ms-grid-row: 1;
@@ -1042,7 +1044,7 @@ body {
   grid-column: 3;
   -ms-grid-row: 3;
   -ms-grid-column: 3;
-}
+} */
 
 .technics__block-wrapper {
   display: -ms-grid;

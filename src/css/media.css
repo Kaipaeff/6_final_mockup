@@ -198,7 +198,8 @@
   .sidebar__menu-tab:hover::before {
     left: -24px;
     width: 4px;
-    background: url('../img/icons/highlight-sidebar-hover.svg');
+    background: url('../assets/img/icons/highlight-sidebar-hover.svg');
+    /* background: url('./assets/img/icons/highlight-sidebar-hover.svg'); */
     -webkit-transition: 0.2s ease-in;
     transition: 0.2s ease-in;
   }
@@ -609,7 +610,7 @@
     row-gap: 24px;
   }
 
-  .brands__block-wrapper>*:nth-child(1) {
+  /* .brands__block-wrapper>*:nth-child(1) {
     grid-row: 1;
     grid-column: 1;
     -ms-grid-row: 1;
@@ -663,7 +664,7 @@
     grid-column: 4;
     -ms-grid-row: 3;
     -ms-grid-column: 4;
-  }
+  } */
 
   .technics__block-wrapper {
     -ms-grid-rows: 160px;
