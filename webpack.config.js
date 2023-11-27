@@ -1,7 +1,67 @@
 const path = require('path');
+const webpack = require('webpack');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const webpack = require('webpack');
+const OptimizeCssAssetWebpackPlugin = require('optimize-css-assets-webpack-plugin');
+const TerserWebpackPlugin = require('terser-webpack-plugin');
+const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
+
+const isDev = process.env.NODE_ENV === 'development';
+const isProd = !isDev;
+
+const filename = (ext) => isDev ? `[name].${ext}` : `[name].[contenthash].${ext}`;
+
+const optimization = () => {
+  const config = {
+    splitChunks: {
+      chunks: 'all'
+    }
+  }
+  if (isProd) {
+    config.minimizer = [
+      new OptimizeCssAssetWebpackPlugin(),
+      new TerserWebpackPlugin(),
+      new ImageMinimizerPlugin({
+        minimizer: {
+          implementation: ImageMinimizerPlugin.imageminMinify,
+          options: {
+            plugins: [
+              ["gifsicle", { interlaced: true }],
+              ["jpegtran", { progressive: true }],
+              ["optipng", { optimizationLevel: 5 }],
+              [
+                "svgo",
+                {
+                  name: 'preset-default',
+                  params: {
+                    overrides: {
+                      convertShapeToPath: {
+                        convertArcs: true
+                      },
+                      convertPathData: false
+                    }
+                  }
+                }
+              ],
+            ],
+          },
+        },
+      }),
+    ]
+  }
+  return config
+}
+
+const cssLoaders = (type) => {
+  const loaders = [
+    MiniCssExtractPlugin.loader,
+    'css-loader',
+  ]
+  if (type) {
+    loaders.push(type);
+  }
+  return loaders;
+}
 
 module.exports = {
   context: path.resolve(__dirname, 'src'),
@@ -10,43 +70,46 @@ module.exports = {
     index: './index.js',
   },
   output: {
-    filename: '[name].[contenthash].js',
+    filename: filename('js'),
     path: path.resolve(__dirname, 'dist'),
     clean: true,
   },
+  optimization: optimization(),
+  devServer: {
+    open: true,
+    compress: true,
+    hot: isDev,
+    port: 3000,
+  },
+  devtool: isProd ? false : 'source-map',
   plugins: [
     new HTMLWebpackPlugin({
       template: './index.html',
       chunks: ['index'],
+      minify: {
+        collapseWhitespace: isProd,
+      },
     }),
     new MiniCssExtractPlugin({
-      filename: '[name].[contenthash].css',
+      filename: filename('css'),
     }),
     new webpack.ProvidePlugin({
       Swiper: 'swiper', // делаем Swiper доступным глобально
     }),
   ],
-  optimization: {
-    moduleIds: 'deterministic',
-    splitChunks: {
-      cacheGroups: {
-        vendors: {
-          test: /[\\/]node_modules[\\/]/,
-          name: 'vendors',
-          chunks: 'all',
-        },
-      },
-    },
-  },
   module: {
     rules: [
       {
-        test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader']
-      },
-      {
         test: /\.html$/,
         use: ['html-loader']
+      },
+      {
+        test: /\.css$/,
+        use: cssLoaders(),
+      },
+      {
+        test: /\.s[ac]ss$/,
+        use: cssLoaders('sass-loader'),
       },
       {
         test: /\.pdf$/,
@@ -84,10 +147,10 @@ module.exports = {
         },
       },
       {
-        test: /\.m?js$/,
+        test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader",
+          loader: 'babel-loader',
           options: {
             presets: ['@babel/preset-env']
           }
