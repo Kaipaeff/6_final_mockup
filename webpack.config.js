@@ -1,9 +1,7 @@
 const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
-// const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const webpack = require('webpack');
-// const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = {
   context: path.resolve(__dirname, 'src'),
@@ -21,15 +19,6 @@ module.exports = {
       template: './index.html',
       chunks: ['index'],
     }),
-    // new CleanWebpackPlugin(),
-    // new CopyWebpackPlugin({    //плагин для favicon.ico
-    //   patterns: [
-    //     {
-    //       from: path.resolve(__dirname, 'src/assets/img/icons/favicon.ico'),
-    //       to: path.resolve(__dirname, 'dist/images')
-    //     }
-    //   ]
-    // }),
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css',
     }),
@@ -94,6 +83,16 @@ module.exports = {
           filename: 'audios/[name].[contenthash][ext]',
         },
       },
+      {
+        test: /\.m?js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ['@babel/preset-env']
+          }
+        }
+      },
     ]
   },
   resolve: {
@@ -101,5 +100,4 @@ module.exports = {
       swiper: 'swiper/bundle',
     },
   },
-  // stats: 'verbose',
 };
