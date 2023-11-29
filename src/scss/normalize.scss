@@ -1,10 +1,15 @@
+$color_1: inherit;
+$font-family_1: monospace, monospace;
+$font-family_2: inherit;
+$background-color_1: transparent;
+
+@import '_variables';
+
 html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   box-sizing: border-box;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
 }
 
 body {
@@ -27,21 +32,20 @@ hr {
 }
 
 pre {
-  font-family: monospace, monospace;
+  font-family: $font-family_1;
   font-size: 1em;
 }
 
 a {
-  background-color: transparent;
-  color: inherit;
+  background-color: $background-color_1;
+  color: $color_1;
   text-decoration: none;
 }
 
 abbr[title] {
   border-bottom: none;
   text-decoration: underline;
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
 }
 
 b {
@@ -53,17 +57,17 @@ strong {
 }
 
 code {
-  font-family: monospace, monospace;
+  font-family: $font-family_1;
   font-size: 1em;
 }
 
 kbd {
-  font-family: monospace, monospace;
+  font-family: $font-family_1;
   font-size: 1em;
 }
 
 samp {
-  font-family: monospace, monospace;
+  font-family: $font-family_1;
   font-size: 1em;
 }
 
@@ -95,20 +99,21 @@ img {
 }
 
 button {
-  font-family: inherit;
+  font-family: $font-family_2;
   font-size: 100%;
   line-height: 1.15;
   margin: 0;
   overflow: visible;
   text-transform: none;
-}
-button::-moz-focus-inner {
-  border-style: none;
-  padding: 0;
+
+  &::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+  }
 }
 
 input {
-  font-family: inherit;
+  font-family: $font-family_2;
   font-size: 100%;
   line-height: 1.15;
   margin: 0;
@@ -116,14 +121,14 @@ input {
 }
 
 optgroup {
-  font-family: inherit;
+  font-family: $font-family_2;
   font-size: 100%;
   line-height: 1.15;
   margin: 0;
 }
 
 select {
-  font-family: inherit;
+  font-family: $font-family_2;
   font-size: 100%;
   line-height: 1.15;
   margin: 0;
@@ -131,7 +136,7 @@ select {
 }
 
 textarea {
-  font-family: inherit;
+  font-family: $font-family_2;
   font-size: 100%;
   line-height: 1.15;
   margin: 0;
@@ -144,7 +149,7 @@ fieldset {
 
 legend {
   box-sizing: border-box;
-  color: inherit;
+  color: $color_1;
   display: table;
   max-width: 100%;
   padding: 0;
@@ -155,28 +160,32 @@ progress {
   vertical-align: baseline;
 }
 
-[type=checkbox] {
+[type="checkbox"] {
   box-sizing: border-box;
   padding: 0;
 }
 
-[type=radio] {
+[type="radio"] {
   box-sizing: border-box;
   padding: 0;
 }
 
-[type=number]::-webkit-inner-spin-button {
-  height: auto;
-}
-[type=number]::-webkit-outer-spin-button {
-  height: auto;
+[type="number"] {
+  &::-webkit-inner-spin-button {
+    height: auto;
+  }
+
+  &::-webkit-outer-spin-button {
+    height: auto;
+  }
 }
 
-[type=search] {
+[type="search"] {
   outline-offset: -2px;
-}
-[type=search]::-webkit-search-decoration {
-  -webkit-appearance: none;
+
+  &::-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
 }
 
 details {
@@ -197,15 +206,18 @@ template {
 
 * {
   box-sizing: inherit;
-}
-*::before {
-  box-sizing: inherit;
-}
-*::after {
-  box-sizing: inherit;
-}
-*::-webkit-scrollbar {
-  display: none;
+
+  &::before {
+    box-sizing: inherit;
+  }
+
+  &::after {
+    box-sizing: inherit;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 ol {
@@ -220,7 +232,7 @@ input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder,
 input::-moz-placeholder,
 textarea::-moz-placeholder {
-  color: #B5B6BC;
+  color: $light_grey;
 }
 
 input:focus,

@@ -1,3 +1,12 @@
+@charset "UTF-8";
+@import "~normalize.css";
+@font-face {
+  font-family: "notosans";
+  src: url("../fonts/notosans.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
 html {
   box-sizing: border-box;
 }
@@ -8,16 +17,16 @@ html {
   box-sizing: inherit;
 }
 
-*:focus{
+*:focus {
   outline: 2px solid transparent;
 }
 
 body {
   overflow-anchor: none;
   margin: 0;
-  font-family: 'Barlow', sans-serif;
-  color: $main-text-color;
-  background-color: $background;
+  font-family: "Barlow", sans-serif;
+  color: #1B1C21;
+  background-color: #F8F8F8;
   scroll-behavior: smooth;
 }
 
@@ -34,7 +43,8 @@ h1, h2, h3, h4, h5, h6, p {
 img {
   height: auto;
   max-width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 ul {
@@ -58,16 +68,16 @@ input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder,
 input::-moz-placeholder,
 textarea::-moz-placeholder {
-  color: $gray;
+  color: #cacaca;
 }
 
 input:focus,
 textarea:focus {
-  outline:none;
+  outline: none;
 }
 
 footer {
-  background: $footer-background;
+  background: #1B1C21;
 }
 
 .is--hidden {
@@ -95,14 +105,28 @@ footer {
   margin: 0 auto;
   padding-right: 20px;
   padding-left: 20px;
-
-  @media (max-width: 1200px) {
+}
+@media (max-width: 1200px) {
+  .container {
     padding-right: 50px;
     padding-left: 50px;
   }
-
-  @media (max-width: 576px) {
+}
+@media (max-width: 576px) {
+  .container {
     padding-right: 15px;
     padding-left: 15px;
   }
+}
+
+.header {
+  text-align: center;
+}
+.header img {
+  width: 30%;
+}
+
+.welcome-title {
+  margin-top: 50px;
+  font-size: 6em;
 }
