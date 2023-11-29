@@ -1,9 +1,3 @@
-// import './index.html';
-// import './css/normalize.css';
-// import './css/style.css';
-// import './css/media.css';
-// import './css/swiper-bundle.css';
-
 import './index.html';
 import './scss/normalize.scss';
 import './scss/style.scss';
