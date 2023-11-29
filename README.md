@@ -1,7 +1,4 @@
-### deploy on Vercel
-### https://6-final-mockup-9brp.vercel.app
-
-### deploy on gh-pages
+## deploy on gh-pages
 ### https://kaipaeff.github.io/6_final_mockup
 
 
