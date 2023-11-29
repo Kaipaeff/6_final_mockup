@@ -1,3 +1,6 @@
+### https://6-final-mockup-9brp.vercel.app
+
+
 ## Блок 1.6: Настройки окружения + верстка финального макета
 
 - [Что такое npm?](https://proglib.io/p/chto-takoe-npm-gayd-po-node-package-manager-dlya-nachinayushchih-2020-07-21)
