@@ -1,5 +1,5 @@
-## deploy on gh-pages
-### https://kaipaeff.github.io/6_final_mockup
+### deploy on gh-pages
+## https://kaipaeff.github.io/6_final_mockup
 
 
 ## Блок 1.6: Настройки окружения + верстка финального макета
