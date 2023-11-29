@@ -1,0 +1,51 @@
+@-webkit-keyframes changeOutlineColor {
+  0% {
+    outline: 2px solid #F8F8F8;
+    border-radius: 6px;
+    background-color: #F8F8F8;
+    color: #7E7E82;
+  }
+
+  100% {
+    outline: 2px solid #FFE0E9;
+    border-radius: 6px;
+    background-color: #ffffff;
+    color: #FF3E79;
+  }
+}
+
+@keyframes changeOutlineColor {
+  0% {
+    outline: 2px solid #F8F8F8;
+    border-radius: 6px;
+    background-color: #F8F8F8;
+    color: #7E7E82;
+  }
+
+  100% {
+    outline: 2px solid #FFE0E9;
+    border-radius: 6px;
+    background-color: #ffffff;
+    color: #FF3E79;
+  }
+}
+
+@-webkit-keyframes changeFillColor {
+  0% {
+    fill: #fff;
+  }
+
+  100% {
+    fill: #FFE0E9;
+  }
+}
+
+@keyframes changeFillColor {
+  0% {
+    fill: #fff;
+  }
+
+  100% {
+    fill: #FFE0E9;
+  }
+}

@@ -1,7 +1,7 @@
 import './index.html';
-import './scss/normalize.scss';
+import './scss/settings/normalize.scss';
 import './scss/style.scss';
-import './scss/swiper-bundle.scss';
+import './scss/settings/swiper-bundle.scss';
 
 import './scripts/modal.js';
 import './scripts/sidebar-links.js';

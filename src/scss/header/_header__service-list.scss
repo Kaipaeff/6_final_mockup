@@ -1,0 +1,39 @@
+@import '../settings/variables';
+
+.header__service-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.service-list__item {
+  height: 40px;
+
+  @media (min-width: 768px) {
+
+    svg {
+      &:hover {
+        rect {
+          fill: #FFE0E9;
+          -webkit-transition: fill 0.3s ease-in-out;
+          transition: fill 0.3s ease-in-out;
+        }
+
+        path {
+          fill: #FF3E79;
+          -webkit-transition: fill 0.3s ease-in-out;
+          transition: fill 0.3s ease-in-out;
+        }
+      }
+    }
+  }
+}
+
+
+
