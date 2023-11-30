@@ -594,7 +594,6 @@
   }
   .nav__sidebar {
     width: 100%;
-    top: var(--header-default-height);
   }
   .services__title {
     font-size: 22px;
